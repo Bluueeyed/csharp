@@ -1,0 +1,31 @@
+﻿<Window x:Class="biblioteka.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:biblioteka"
+        mc:Ignorable="d"
+        Title="Biblioteka" Height="400" Width="600">
+    <Grid Background="AliceBlue">
+        <Button x:Name="button" Content="Dodaj" HorizontalAlignment="Left" Height="40" Margin="471,113,0,0" VerticalAlignment="Top" Width="100" Click="button_Click"/>
+        <Button x:Name="button1" Content="Usuń" HorizontalAlignment="Left" Height="42" Margin="471,169,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="button2" Content="Wypożycz" HorizontalAlignment="Left" Height="42" Margin="471,231,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="button3" Content="Zwróć" HorizontalAlignment="Left" Height="40" Margin="471,295,0,0" VerticalAlignment="Top" Width="100" Click="button3_Click"/>
+        <CheckBox x:Name="checkBox" Content="Wszystko" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkBox_Copy" Content="Książki" HorizontalAlignment="Left" Margin="120,81,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkBox_Copy1" Content="Czasopisma" HorizontalAlignment="Left" Margin="222,80,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkBox_Copy3" Content="Audiobooki" HorizontalAlignment="Left" Margin="347,80,0,0" VerticalAlignment="Top"/>
+        <ListView x:Name="Lista" HorizontalAlignment="Left" Height="222" Margin="10,113,0,0" VerticalAlignment="Top" Width="444">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Tytuł" Width="150" DisplayMemberBinding="{Binding tytul}" />
+                    <GridViewColumn Header="Rodzaj" Width="150" DisplayMemberBinding="{Binding rodzaj}" />
+                    <GridViewColumn Header="Dostępna?" Width="134" DisplayMemberBinding="{Binding czyWypozyczona}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Name="label" Content="Pokaż:" HorizontalAlignment="Left" Height="27" Margin="10,48,0,0" VerticalAlignment="Top" Width="203"/>
+        <Label x:Name="label1" Content="Elektroniczna Biblioteka" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="247" Height="38" FontSize="20" FontFamily="Segoe UI Semilight Italic"/>
+
+    </Grid>
+</Window>
